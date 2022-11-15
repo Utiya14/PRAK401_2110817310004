@@ -1,0 +1,25 @@
+package praktikum4.soal1;
+//mengimport scanner
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[]args){
+        String judul;
+        String penulis;
+        int tahun;
+        //membuat scanner
+        Scanner input = new Scanner(System.in);
+        
+        //pengambilan nilai inputan
+        System.out.print("Judul: ");
+        judul = input.nextLine();
+        System.out.print("Penulis: ");
+        penulis = input.nextLine();
+        System.out.print("Tahun Terbit: ");
+        tahun = input.nextInt();
+        
+        //instansiasi objek
+        Buku buku = new Buku(judul, penulis, tahun);
+        buku.display();
+    }
+}
