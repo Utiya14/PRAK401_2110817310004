@@ -1,0 +1,23 @@
+package praktikum4.soal2;
+
+public class Komik extends Buku {
+    private String sinopsis;
+    private int volume;
+    
+    //konstruktor
+    Komik(String j,String p, String t ,int v,String s){
+        this.judul = j;
+        this.penulis = p;
+        this.tahun = Integer.parseInt(t);
+        this.volume = v;
+        this.sinopsis = s;
+    }
+    
+    //metod untuk membuat output tanpa perintah printf
+    public String getKomikDetail(){
+        return "Data yang diinputkan adalah \n" +
+        "Sebuah komik dengan judul \" "+ this.judul +" \". Komik tersbeut dibuat oleh "+ this.penulis 
+        + "\n dan diterbitkan pada tahun "+ this.tahun + ". Sampai saat ini komik tersebut memiliki jumlah \n volume sebanyak "+ this.volume + ".\n"
+        +"Sinopsis :"+ this.sinopsis.substring(0, 64) + "...";
+    }
+}
