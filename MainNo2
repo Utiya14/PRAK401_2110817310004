@@ -1,0 +1,55 @@
+package praktikum4.soal2;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args){
+        String j, p, t, g , s;
+        int v, pilih;
+        //membuat scanner baru
+        Scanner input = new Scanner(System.in);
+        
+        //menampilkan arahan untuk inputan user
+        System.out.println("Pilih buku yang ingin diinputkan:");
+        System.out.println("1 = Novel");
+        System.out.println("2 = Komik");
+        System.out.print("Masukkan Pilihan: ");
+        pilih = input.nextInt();
+        //membuat pengkondisian
+        if(pilih == 1) {
+            input.nextLine();
+            System.out.print("Judul: ");
+            j = input.nextLine();
+            System.out.print("Penulis: ");
+            p = input.nextLine();
+            System.out.print("Tahun Terbit: ");
+            t = input.nextLine();
+            System.out.print("Genre: ");
+            g = input.nextLine();
+            System.out.print("Sinopsis: ");
+            s = input.nextLine();
+            
+            //memanggil metod pada class Novel
+            Novel novel = new Novel(j, p, t, g, s);
+            System.out.println(novel.getNovelDetail());
+        } else {   
+            input.nextLine();
+            System.out.print("Judul: ");
+            j = input.nextLine();
+            System.out.print("Penulis: ");
+            p = input.nextLine();
+            System.out.print("Tahun Terbit: ");
+            t = input.nextLine();
+            System.out.print("Volume: ");
+            v = input.nextInt();
+            
+            input.nextLine();
+            System.out.print("Sinopsis: ");
+            s = input.nextLine();
+            
+            //memanggil metod pada class Komik
+            Komik komik = new Komik(j, p, t, v, s);
+            System.out.println(komik.getKomikDetail());
+        }
+    }   
+}
